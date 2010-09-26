@@ -44,12 +44,12 @@ if __name__ == '__main__':
 
     navCtlOpt = NavigationControlOptions()
     navCtlOpt.style = NavigationControlStyle('ZOOM_PAN')
-    navCtlOpt.position = ControlPosition('TOP_RIGHT')
+    navCtlOpt.position = ControlPosition('TOP_LEFT')
     mapOpts.navigationControlOptions = navCtlOpt
 
     mapTypeOpt = MapTypeControlOptions()
     mapTypeOpt.style = MapTypeControlStyle('HORIZONTAL_BAR')
-    mapTypeOpt.position = ControlPosition('BOTTOM')
+    mapTypeOpt.position = ControlPosition('TOP_RIGHT')
     mapOpts.mapTypeControlOptions = mapTypeOpt
     fpo.write("var myOptions = " + str(mapOpts) + ";\n")
     fpo.write('var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);\n')
